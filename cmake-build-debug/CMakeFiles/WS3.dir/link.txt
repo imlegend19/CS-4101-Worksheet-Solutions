@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/WS3.dir/Work_Sheet_4/script.cpp.o  -o WS3 

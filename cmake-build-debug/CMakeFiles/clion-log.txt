@@ -1,0 +1,4 @@
+/home/imlegend19/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug

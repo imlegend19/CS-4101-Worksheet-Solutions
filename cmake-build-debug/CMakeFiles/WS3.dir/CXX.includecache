@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/Work Sheet 4/script.cpp
+bits/stdc++.h
+-
+cmath
+-
+
