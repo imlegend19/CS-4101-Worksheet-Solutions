@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 #include <cmath>
 
+#define N 4
+
 typedef long double ld;
 
 typedef ld (*Function)(ld x);
@@ -10,6 +12,15 @@ const ld gm = (1 + sqrt(5)) / 2;
 const ld dh = sqrt(DBL_EPSILON);
 
 using namespace std;
+
+template<class T>
+void display(T A[N][N]) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++)
+            cout << A[i][j] << " ";
+        cout << endl;
+    }
+}
 
 ld q1a(ld x) { return -(x * x) / (powl(x, 3) + cos(x)); }
 
@@ -31,17 +42,17 @@ ld q1i(ld x) { return 0.5 * powl(x, 2) + (2 * cos(x)); }
 
 ld q1j(ld x) { return powl(x, 100); }
 
+ld q3b(ld x) { return (x - 1) * powl(x - 3, 2); }
+
 ld derivative(Function f, ld x) { return (f(x + dh) - f(x - dh)) / 2 * dh; }
 
 ld double_derivative(Function f, ld x) { return (f(x + dh) - 2 * f(x) + f(x - dh)) / powl(dh, 2); }
 
 //for extrema
 ld *newton_raphson(Function f, ld a) {
-    ld h = derivative(f, a) / double_derivative(f, a);
-
     int eval = 0;
     while (a <= 5) {
-        h = derivative(f, a) / double_derivative(f, a);
+        ld h = derivative(f, a) / double_derivative(f, a);
         a -= h;
         eval += 1;
     }
@@ -129,6 +140,135 @@ ld *quadratic_fit_search(ld a, ld b, ld c, Function f, int n) {
         return new ld[2]{c, yc};
 }
 
+// for minima
+ld *qfs_minima(ld a, ld b, ld c, Function f, int n) {
+    ld ya, yb, yc;
+    ya = f(a);
+    yb = f(b);
+    yc = f(c);
+
+    for (int i = 0; i < n - 3; i++) {
+        ld x = 0.5 * ((ya * (b * b - c * c) + yb * (c * c - a * a) + yc * (a * a - b * b))) /
+               ((ya * (b - c) + yb * (c - a) + yc * (a - b)));
+
+        ld yx = f(x);
+
+        if (x > b) {
+            if (yx > yb) {
+                c = x;
+                yc = yx;
+            } else {
+                a = b;
+                ya = yb;
+                b = x;
+                yb = yx;
+            }
+        } else if (x < b) {
+            if (yx > yb) {
+                a = x;
+                ya = yx;
+            } else {
+                c = b;
+                yc = yb;
+                b = x;
+                yb = yx;
+            }
+        }
+    }
+
+    if (ya <= yb && ya <= yc)
+        return new ld[2]{a, ya};
+    else if (yb <= ya && yb <= yc)
+        return new ld[2]{b, yb};
+    else
+        return new ld[2]{c, yc};
+}
+
+void transpose(int A[][N], int B[][N]) {
+    int i, j;
+    for (i = 0; i < N; i++)
+        for (j = 0; j < N; j++)
+            B[i][j] = A[j][i];
+}
+
+void multiply(int mat1[][N], int mat2[][N], int res[][N]) {
+    int i, j, k;
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
+            res[i][j] = 0;
+            for (k = 0; k < N; k++)
+                res[i][j] += mat1[i][k] * mat2[k][j];
+        }
+    }
+}
+
+void getCofactor(int mat[N][N], int temp[N][N], int p, int q, int n) {
+    int i = 0, j = 0;
+
+    // Looping for each element of the matrix
+    for (int row = 0; row < n; row++) {
+        for (int col = 0; col < n; col++) {
+            //  Copying into temporary matrix only those element
+            //  which are not in given row and column
+            if (row != p && col != q) {
+                temp[i][j++] = mat[row][col];
+
+                // Row is filled, so increase row index and
+                // reset col index
+                if (j == n - 1) {
+                    j = 0;
+                    i++;
+                }
+            }
+        }
+    }
+}
+
+int determinantOfMatrix(int mat[N][N], int n) {
+    int D = 0;
+    if (n == 1)
+        return mat[0][0];
+
+    int temp[N][N];
+    int sign = 1;
+
+    for (int f = 0; f < n; f++) {
+        getCofactor(mat, temp, 0, f, n);
+        D += sign * mat[0][f] * determinantOfMatrix(temp, n - 1);
+        sign = -sign;
+    }
+
+    return D;
+}
+
+void adjoint(int A[N][N], int adj[N][N]) {
+    int sign, temp[N][N];
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            getCofactor(A, temp, i, j, N);
+            sign = ((i + j) % 2 == 0) ? 1 : -1;
+            adj[j][i] = (sign) * (determinantOfMatrix(temp, N - 1));
+        }
+    }
+}
+
+bool inverse(int A[N][N], float inverse[N][N]) {
+    int det = determinantOfMatrix(A, N);
+    if (det == 0) {
+        cout << "Singular matrix, can't find its inverse";
+        return false;
+    }
+
+    int adj[N][N];
+    adjoint(A, adj);
+
+    for (int i = 0; i < N; i++)
+        for (int j = 0; j < N; j++)
+            inverse[i][j] = (float) adj[i][j] / float(det);
+
+    return true;
+}
+
 int main() {
     ios_base::sync_with_stdio(false);
 
@@ -174,6 +314,88 @@ int main() {
              << " evaluations. " << endl;
     }
 
+    cout << "--------------------" << endl;
+    cout << "--------------------" << endl;
+
+    ld *min = qfs_minima(1, 2, 4, q3b, 10);
+    cout << "The maximum value for Q3-(b) is " << min[1] << " at " << min[0] << endl;
+
+    cout << "--------------------" << endl;
+    cout << "--------------------" << endl;
+
+    int A[N][N] = {{1, 1, 1, 1},
+                   {2, 2, 2, 2},
+                   {3, 3, 3, 3},
+                   {4, 4, 4, 4}};
+
+    int B[N][N], i, j;
+
+    transpose(A, B);
+
+    printf("Result matrix is \n");
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++)
+            printf("%d ", B[i][j]);
+        printf("\n");
+    }
+
+    cout << "--------------------" << endl;
+    cout << "--------------------" << endl;
+
+    int res[N][N]; // To store result
+    int mat1[N][N] = {{1, 1, 1, 1},
+                      {2, 2, 2, 2},
+                      {3, 3, 3, 3},
+                      {4, 4, 4, 4}};
+
+    int mat2[N][N] = {{1, 1, 1, 1},
+                      {2, 2, 2, 2},
+                      {3, 3, 3, 3},
+                      {4, 4, 4, 4}};
+
+    multiply(mat1, mat2, res);
+
+    cout << "Result matrix is \n";
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++)
+            cout << res[i][j] << " ";
+        cout << "\n";
+    }
+
+    cout << "--------------------" << endl;
+    cout << "--------------------" << endl;
+
+    int mat[N][N] = {{1, 0, 2, -1},
+                     {3, 0, 0, 5},
+                     {2, 1, 4, -3},
+                     {1, 0, 5, 0}
+    };
+
+    printf("Determinant of the matrix is : %d", determinantOfMatrix(mat, N));
+
+    cout << "--------------------" << endl;
+    cout << "--------------------" << endl;
+
+    int X[N][N] = {{5,  -2, 2,  7},
+                   {1,  0,  0,  3},
+                   {-3, 1,  5,  0},
+                   {3,  -1, -9, 4}};
+
+    int adj[N][N];
+    float inv[N][N];
+
+    cout << "Input matrix is :\n";
+    display(X);
+
+    cout << "\nThe Adjoint is :\n";
+    adjoint(X, adj);
+    display(adj);
+
+    cout << "\nThe Inverse is :\n";
+    if (inverse(X, inv))
+        display(inv);
+
+    cout << "--------------------" << endl;
     cout << "--------------------" << endl;
 
     return 0;
