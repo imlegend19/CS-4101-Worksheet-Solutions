@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named WS3
+# Target rules for targets named WS4
 
 # Build rule for target.
-WS3: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 WS3
-.PHONY : WS3
+WS4: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WS4
+.PHONY : WS4
 
 # fast build rule for target.
-WS3/fast:
-	$(MAKE) -f CMakeFiles/WS3.dir/build.make CMakeFiles/WS3.dir/build
-.PHONY : WS3/fast
+WS4/fast:
+	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/build
+.PHONY : WS4/fast
 
 Work_Sheet_4/script.o: Work_Sheet_4/script.cpp.o
 
@@ -129,7 +129,7 @@ Work_Sheet_4/script.o: Work_Sheet_4/script.cpp.o
 
 # target to build an object file
 Work_Sheet_4/script.cpp.o:
-	$(MAKE) -f CMakeFiles/WS3.dir/build.make CMakeFiles/WS3.dir/Work_Sheet_4/script.cpp.o
+	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/Work_Sheet_4/script.cpp.o
 .PHONY : Work_Sheet_4/script.cpp.o
 
 Work_Sheet_4/script.i: Work_Sheet_4/script.cpp.i
@@ -138,7 +138,7 @@ Work_Sheet_4/script.i: Work_Sheet_4/script.cpp.i
 
 # target to preprocess a source file
 Work_Sheet_4/script.cpp.i:
-	$(MAKE) -f CMakeFiles/WS3.dir/build.make CMakeFiles/WS3.dir/Work_Sheet_4/script.cpp.i
+	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/Work_Sheet_4/script.cpp.i
 .PHONY : Work_Sheet_4/script.cpp.i
 
 Work_Sheet_4/script.s: Work_Sheet_4/script.cpp.s
@@ -147,7 +147,7 @@ Work_Sheet_4/script.s: Work_Sheet_4/script.cpp.s
 
 # target to generate assembly for a file
 Work_Sheet_4/script.cpp.s:
-	$(MAKE) -f CMakeFiles/WS3.dir/build.make CMakeFiles/WS3.dir/Work_Sheet_4/script.cpp.s
+	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/Work_Sheet_4/script.cpp.s
 .PHONY : Work_Sheet_4/script.cpp.s
 
 # Help Target
@@ -157,7 +157,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... WS3"
+	@echo "... WS4"
 	@echo "... edit_cache"
 	@echo "... Work_Sheet_4/script.o"
 	@echo "... Work_Sheet_4/script.i"

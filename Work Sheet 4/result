@@ -1,13 +1,27 @@
 Quadratic Fit Search
 --------------------
-The minimum value for Q1-(a) is -0.649223 at 1
-The minimum value for Q1-(b) is -5.34868 at 1.49939
-The minimum value for Q1-(c) is -0.46329 at 4.61459
-The minimum value for Q1-(d) is -0.571744 at 2.97509
-The minimum value for Q1-(e) is 0.166667 at 5
-The minimum value for Q1-(f) is 0 at 5
-The minimum value for Q1-(g) is 0 at 3
-The minimum value for Q1-(h) is -6.62386 at 1
-The minimum value for Q1-(i) is 2.52002 at 3
-The minimum value for Q1-(j) is 1 at 1
+The maximum value for Q1-(a) is -0 at 0
+The maximum value for Q1-(b) is 0 at 0
+The maximum value for Q1-(c) is -0.428844 at 5
+The maximum value for Q1-(d) is 2.29231 at 0.18394
+The maximum value for Q1-(e) is 0.183842 at 0.0520993
+The maximum value for Q1-(f) is 2250 at 0
+The maximum value for Q1-(g) is 1 at -3.93144
+The maximum value for Q1-(h) is 0.0726627 at 120.105
+The maximum value for Q1-(i) is 2 at -1.4045e-10
+The maximum value for Q1-(j) is 7.88861e+69 at 5
+--------------------
+--------------------
+1D Line Search - Golden Section Search
+--------------------
+The maximum value for Q1-(a) is -0.199547 at 5 in 23 evaluations.
+The maximum value for Q1-(b) is 3.42023e+13 at 5 in 23 evaluations.
+The maximum value for Q1-(c) is 0.851241 at 1.1656 in 23 evaluations.
+The maximum value for Q1-(d) is inf at 0 in 23 evaluations.
+The maximum value for Q1-(e) is 0.183854 at 0.0416447 in 23 evaluations.
+The maximum value for Q1-(f) is 2250 at 0 in 23 evaluations.
+The maximum value for Q1-(g) is 0.999877 at 0 in 23 evaluations.
+The maximum value for Q1-(h) is -0.312932 at 5 in 23 evaluations.
+The maximum value for Q1-(i) is 13.0673 at 5 in 23 evaluations.
+The maximum value for Q1-(j) is 7.88861e+69 at 5 in 23 evaluations.
 --------------------

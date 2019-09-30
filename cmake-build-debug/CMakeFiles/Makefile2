@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Opt
 CMAKE_BINARY_DIR = /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/WS3.dir
+# Target rules for target CMakeFiles/WS4.dir
 
 # All Build rule for target.
-CMakeFiles/WS3.dir/all:
-	$(MAKE) -f CMakeFiles/WS3.dir/build.make CMakeFiles/WS3.dir/depend
-	$(MAKE) -f CMakeFiles/WS3.dir/build.make CMakeFiles/WS3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target WS3"
-.PHONY : CMakeFiles/WS3.dir/all
+CMakeFiles/WS4.dir/all:
+	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/depend
+	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target WS4"
+.PHONY : CMakeFiles/WS4.dir/all
 
 # Include target in all.
-all: CMakeFiles/WS3.dir/all
+all: CMakeFiles/WS4.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/WS3.dir/rule: cmake_check_build_system
+CMakeFiles/WS4.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WS3.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WS4.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/WS3.dir/rule
+.PHONY : CMakeFiles/WS4.dir/rule
 
 # Convenience name for target.
-WS3: CMakeFiles/WS3.dir/rule
+WS4: CMakeFiles/WS4.dir/rule
 
-.PHONY : WS3
-
-# clean rule for target.
-CMakeFiles/WS3.dir/clean:
-	$(MAKE) -f CMakeFiles/WS3.dir/build.make CMakeFiles/WS3.dir/clean
-.PHONY : CMakeFiles/WS3.dir/clean
+.PHONY : WS4
 
 # clean rule for target.
-clean: CMakeFiles/WS3.dir/clean
+CMakeFiles/WS4.dir/clean:
+	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/clean
+.PHONY : CMakeFiles/WS4.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/WS4.dir/clean
 
 .PHONY : clean
 
