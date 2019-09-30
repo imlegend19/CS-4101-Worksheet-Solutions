@@ -25,3 +25,60 @@ The maximum value for Q1-(h) is -0.312932 at 5 in 23 evaluations.
 The maximum value for Q1-(i) is 13.0673 at 5 in 23 evaluations.
 The maximum value for Q1-(j) is 7.88861e+69 at 5 in 23 evaluations.
 --------------------
+--------------------
+Newton-Raphson Method
+--------------------
+The maximum value for Q1-(a) is -0.649223 at 1 in 1001 evaluations.
+The maximum value for Q1-(b) is -2.71828 at 1 in 1001 evaluations.
+The maximum value for Q1-(c) is 0.841471 at 1 in 1001 evaluations.
+The maximum value for Q1-(d) is 0.540302 at 1 in 1001 evaluations.
+The maximum value for Q1-(e) is 0.125 at 1 in 1001 evaluations.
+The maximum value for Q1-(f) is 256 at 1 in 1001 evaluations.
+The maximum value for Q1-(g) is 0.981684 at 1 in 1001 evaluations.
+The maximum value for Q1-(h) is -6.62386 at 1 in 1001 evaluations.
+The maximum value for Q1-(i) is 1.5806 at 1 in 1001 evaluations.
+The maximum value for Q1-(j) is 1 at 1 in 1001 evaluations.
+--------------------
+--------------------
+The minimum value for Q3-(b) is 0 at 1
+--------------------
+--------------------
+Transpose of the matrix is
+--------------------
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+--------------------
+--------------------
+Result of matrix multiplication is
+--------------------
+10 10 10 10
+20 20 20 20
+30 30 30 30
+40 40 40 40
+--------------------
+--------------------
+Determinant of the matrix is : 30
+Input matrix is :
+--------------------
+5 -2 2 7
+1 0 0 3
+-3 1 5 0
+3 -1 -9 4
+
+The Adjoint is :
+--------------------
+-12 76 -60 -36
+-56 208 -82 -58
+4 4 -2 -10
+4 4 20 12
+
+The Inverse is :
+--------------------
+-0.136364 0.863636 -0.681818 -0.409091
+-0.636364 2.36364 -0.931818 -0.659091
+0.0454545 0.0454545 -0.0227273 -0.113636
+0.0454545 0.0454545 0.227273 0.136364
+
+--------------------

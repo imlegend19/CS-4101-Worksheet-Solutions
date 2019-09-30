@@ -20,6 +20,8 @@ void display(T A[N][N]) {
             cout << A[i][j] << " ";
         cout << endl;
     }
+
+    cout << endl;
 }
 
 ld q1a(ld x) { return -(x * x) / (powl(x, 3) + cos(x)); }
@@ -51,10 +53,12 @@ ld double_derivative(Function f, ld x) { return (f(x + dh) - 2 * f(x) + f(x - dh
 //for extrema
 ld *newton_raphson(Function f, ld a) {
     int eval = 0;
-    while (a <= 5) {
+    int iter = 0;
+    while (a <= 5 and iter <= 1000) {
         ld h = derivative(f, a) / double_derivative(f, a);
         a -= h;
         eval += 1;
+        iter += 1;
     }
 
     return new ld[3]{a, f(a), (ld) eval};
@@ -205,16 +209,10 @@ void multiply(int mat1[][N], int mat2[][N], int res[][N]) {
 void getCofactor(int mat[N][N], int temp[N][N], int p, int q, int n) {
     int i = 0, j = 0;
 
-    // Looping for each element of the matrix
     for (int row = 0; row < n; row++) {
         for (int col = 0; col < n; col++) {
-            //  Copying into temporary matrix only those element
-            //  which are not in given row and column
             if (row != p && col != q) {
                 temp[i][j++] = mat[row][col];
-
-                // Row is filled, so increase row index and
-                // reset col index
                 if (j == n - 1) {
                     j = 0;
                     i++;
@@ -318,7 +316,7 @@ int main() {
     cout << "--------------------" << endl;
 
     ld *min = qfs_minima(1, 2, 4, q3b, 10);
-    cout << "The maximum value for Q3-(b) is " << min[1] << " at " << min[0] << endl;
+    cout << "The minimum value for Q3-(b) is " << min[1] << " at " << min[0] << endl;
 
     cout << "--------------------" << endl;
     cout << "--------------------" << endl;
@@ -332,11 +330,12 @@ int main() {
 
     transpose(A, B);
 
-    printf("Result matrix is \n");
+    cout << "Transpose of the matrix is " << endl;
+    cout << "--------------------" << endl;
     for (i = 0; i < N; i++) {
         for (j = 0; j < N; j++)
-            printf("%d ", B[i][j]);
-        printf("\n");
+            cout << B[i][j] << " ";
+        cout << endl;
     }
 
     cout << "--------------------" << endl;
@@ -355,7 +354,8 @@ int main() {
 
     multiply(mat1, mat2, res);
 
-    cout << "Result matrix is \n";
+    cout << "Result of matrix multiplication is \n";
+    cout << "--------------------" << endl;
     for (i = 0; i < N; i++) {
         for (j = 0; j < N; j++)
             cout << res[i][j] << " ";
@@ -371,10 +371,7 @@ int main() {
                      {1, 0, 5, 0}
     };
 
-    printf("Determinant of the matrix is : %d", determinantOfMatrix(mat, N));
-
-    cout << "--------------------" << endl;
-    cout << "--------------------" << endl;
+    cout << "Determinant of the matrix is : " << determinantOfMatrix(mat, N) << endl;
 
     int X[N][N] = {{5,  -2, 2,  7},
                    {1,  0,  0,  3},
@@ -384,18 +381,20 @@ int main() {
     int adj[N][N];
     float inv[N][N];
 
-    cout << "Input matrix is :\n";
+    cout << "Input matrix is : " << endl;
+    cout << "--------------------" << endl;
     display(X);
 
-    cout << "\nThe Adjoint is :\n";
+    cout << "The Adjoint is : " << endl;
+    cout << "--------------------" << endl;
     adjoint(X, adj);
     display(adj);
 
-    cout << "\nThe Inverse is :\n";
+    cout << "The Inverse is : " << endl;
+    cout << "--------------------" << endl;
     if (inverse(X, inv))
         display(inv);
 
-    cout << "--------------------" << endl;
     cout << "--------------------" << endl;
 
     return 0;
