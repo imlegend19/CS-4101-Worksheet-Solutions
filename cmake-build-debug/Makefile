@@ -123,6 +123,19 @@ WS4/fast:
 	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/build
 .PHONY : WS4/fast
 
+#=============================================================================
+# Target rules for targets named WS6
+
+# Build rule for target.
+WS6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WS6
+.PHONY : WS6
+
+# fast build rule for target.
+WS6/fast:
+	$(MAKE) -f CMakeFiles/WS6.dir/build.make CMakeFiles/WS6.dir/build
+.PHONY : WS6/fast
+
 Work_Sheet_4/script.o: Work_Sheet_4/script.cpp.o
 
 .PHONY : Work_Sheet_4/script.o
@@ -150,6 +163,33 @@ Work_Sheet_4/script.cpp.s:
 	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/Work_Sheet_4/script.cpp.s
 .PHONY : Work_Sheet_4/script.cpp.s
 
+Work_Sheet_6/script.o: Work_Sheet_6/script.cpp.o
+
+.PHONY : Work_Sheet_6/script.o
+
+# target to build an object file
+Work_Sheet_6/script.cpp.o:
+	$(MAKE) -f CMakeFiles/WS6.dir/build.make CMakeFiles/WS6.dir/Work_Sheet_6/script.cpp.o
+.PHONY : Work_Sheet_6/script.cpp.o
+
+Work_Sheet_6/script.i: Work_Sheet_6/script.cpp.i
+
+.PHONY : Work_Sheet_6/script.i
+
+# target to preprocess a source file
+Work_Sheet_6/script.cpp.i:
+	$(MAKE) -f CMakeFiles/WS6.dir/build.make CMakeFiles/WS6.dir/Work_Sheet_6/script.cpp.i
+.PHONY : Work_Sheet_6/script.cpp.i
+
+Work_Sheet_6/script.s: Work_Sheet_6/script.cpp.s
+
+.PHONY : Work_Sheet_6/script.s
+
+# target to generate assembly for a file
+Work_Sheet_6/script.cpp.s:
+	$(MAKE) -f CMakeFiles/WS6.dir/build.make CMakeFiles/WS6.dir/Work_Sheet_6/script.cpp.s
+.PHONY : Work_Sheet_6/script.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -157,11 +197,15 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... WS4"
 	@echo "... edit_cache"
+	@echo "... WS4"
+	@echo "... WS6"
 	@echo "... Work_Sheet_4/script.o"
 	@echo "... Work_Sheet_4/script.i"
 	@echo "... Work_Sheet_4/script.s"
+	@echo "... Work_Sheet_6/script.o"
+	@echo "... Work_Sheet_6/script.i"
+	@echo "... Work_Sheet_6/script.s"
 .PHONY : help
 
 
