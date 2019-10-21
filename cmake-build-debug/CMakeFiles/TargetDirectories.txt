@@ -1,4 +1,5 @@
 /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles/BiCG.dir
 /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles/WS4.dir
 /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles/WS6.dir

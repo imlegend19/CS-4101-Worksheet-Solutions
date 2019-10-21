@@ -65,13 +65,50 @@ CMAKE_SOURCE_DIR = /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Opt
 CMAKE_BINARY_DIR = /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug
 
 #=============================================================================
+# Target rules for target CMakeFiles/BiCG.dir
+
+# All Build rule for target.
+CMakeFiles/BiCG.dir/all:
+	$(MAKE) -f CMakeFiles/BiCG.dir/build.make CMakeFiles/BiCG.dir/depend
+	$(MAKE) -f CMakeFiles/BiCG.dir/build.make CMakeFiles/BiCG.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target BiCG"
+.PHONY : CMakeFiles/BiCG.dir/all
+
+# Include target in all.
+all: CMakeFiles/BiCG.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/BiCG.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/BiCG.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/BiCG.dir/rule
+
+# Convenience name for target.
+BiCG: CMakeFiles/BiCG.dir/rule
+
+.PHONY : BiCG
+
+# clean rule for target.
+CMakeFiles/BiCG.dir/clean:
+	$(MAKE) -f CMakeFiles/BiCG.dir/build.make CMakeFiles/BiCG.dir/clean
+.PHONY : CMakeFiles/BiCG.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/BiCG.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/WS4.dir
 
 # All Build rule for target.
 CMakeFiles/WS4.dir/all:
 	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/depend
 	$(MAKE) -f CMakeFiles/WS4.dir/build.make CMakeFiles/WS4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target WS4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target WS4"
 .PHONY : CMakeFiles/WS4.dir/all
 
 # Include target in all.
@@ -108,7 +145,7 @@ clean: CMakeFiles/WS4.dir/clean
 CMakeFiles/WS6.dir/all:
 	$(MAKE) -f CMakeFiles/WS6.dir/build.make CMakeFiles/WS6.dir/depend
 	$(MAKE) -f CMakeFiles/WS6.dir/build.make CMakeFiles/WS6.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target WS6"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/imlegend19/PycharmProjects/CS4101-Linear_Non-Linear_Optimisation/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target WS6"
 .PHONY : CMakeFiles/WS6.dir/all
 
 # Include target in all.

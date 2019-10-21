@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named BiCG
+
+# Build rule for target.
+BiCG: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 BiCG
+.PHONY : BiCG
+
+# fast build rule for target.
+BiCG/fast:
+	$(MAKE) -f CMakeFiles/BiCG.dir/build.make CMakeFiles/BiCG.dir/build
+.PHONY : BiCG/fast
+
+#=============================================================================
 # Target rules for targets named WS4
 
 # Build rule for target.
@@ -135,6 +148,33 @@ WS6: cmake_check_build_system
 WS6/fast:
 	$(MAKE) -f CMakeFiles/WS6.dir/build.make CMakeFiles/WS6.dir/build
 .PHONY : WS6/fast
+
+Research/BiCG.o: Research/BiCG.cpp.o
+
+.PHONY : Research/BiCG.o
+
+# target to build an object file
+Research/BiCG.cpp.o:
+	$(MAKE) -f CMakeFiles/BiCG.dir/build.make CMakeFiles/BiCG.dir/Research/BiCG.cpp.o
+.PHONY : Research/BiCG.cpp.o
+
+Research/BiCG.i: Research/BiCG.cpp.i
+
+.PHONY : Research/BiCG.i
+
+# target to preprocess a source file
+Research/BiCG.cpp.i:
+	$(MAKE) -f CMakeFiles/BiCG.dir/build.make CMakeFiles/BiCG.dir/Research/BiCG.cpp.i
+.PHONY : Research/BiCG.cpp.i
+
+Research/BiCG.s: Research/BiCG.cpp.s
+
+.PHONY : Research/BiCG.s
+
+# target to generate assembly for a file
+Research/BiCG.cpp.s:
+	$(MAKE) -f CMakeFiles/BiCG.dir/build.make CMakeFiles/BiCG.dir/Research/BiCG.cpp.s
+.PHONY : Research/BiCG.cpp.s
 
 Work_Sheet_4/script.o: Work_Sheet_4/script.cpp.o
 
@@ -198,8 +238,12 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... BiCG"
 	@echo "... WS4"
 	@echo "... WS6"
+	@echo "... Research/BiCG.o"
+	@echo "... Research/BiCG.i"
+	@echo "... Research/BiCG.s"
 	@echo "... Work_Sheet_4/script.o"
 	@echo "... Work_Sheet_4/script.i"
 	@echo "... Work_Sheet_4/script.s"

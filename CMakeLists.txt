@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(WS4 Work\ Sheet\ 4/script.cpp)
 add_executable(WS6 Work\ Sheet\ 6/script.cpp)
+add_executable(BiCG Research/BiCG.cpp)
