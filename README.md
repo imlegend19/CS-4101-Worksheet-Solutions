@@ -1,2 +1,3 @@
-# CS4101-Linear_Non-Linear_Optimisation
-Solutions for lab questions for Optimisation
+# CS4101-Linear & Non-Linear Optimisation
+
+This repository contains all the solutions for lab questions of CS-4101.
