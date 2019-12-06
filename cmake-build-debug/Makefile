@@ -124,6 +124,19 @@ BiCG/fast:
 .PHONY : BiCG/fast
 
 #=============================================================================
+# Target rules for targets named Eval
+
+# Build rule for target.
+Eval: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Eval
+.PHONY : Eval
+
+# fast build rule for target.
+Eval/fast:
+	$(MAKE) -f CMakeFiles/Eval.dir/build.make CMakeFiles/Eval.dir/build
+.PHONY : Eval/fast
+
+#=============================================================================
 # Target rules for targets named WS4
 
 # Build rule for target.
@@ -148,6 +161,33 @@ WS6: cmake_check_build_system
 WS6/fast:
 	$(MAKE) -f CMakeFiles/WS6.dir/build.make CMakeFiles/WS6.dir/build
 .PHONY : WS6/fast
+
+Evaluation/script.o: Evaluation/script.cpp.o
+
+.PHONY : Evaluation/script.o
+
+# target to build an object file
+Evaluation/script.cpp.o:
+	$(MAKE) -f CMakeFiles/Eval.dir/build.make CMakeFiles/Eval.dir/Evaluation/script.cpp.o
+.PHONY : Evaluation/script.cpp.o
+
+Evaluation/script.i: Evaluation/script.cpp.i
+
+.PHONY : Evaluation/script.i
+
+# target to preprocess a source file
+Evaluation/script.cpp.i:
+	$(MAKE) -f CMakeFiles/Eval.dir/build.make CMakeFiles/Eval.dir/Evaluation/script.cpp.i
+.PHONY : Evaluation/script.cpp.i
+
+Evaluation/script.s: Evaluation/script.cpp.s
+
+.PHONY : Evaluation/script.s
+
+# target to generate assembly for a file
+Evaluation/script.cpp.s:
+	$(MAKE) -f CMakeFiles/Eval.dir/build.make CMakeFiles/Eval.dir/Evaluation/script.cpp.s
+.PHONY : Evaluation/script.cpp.s
 
 Research/BiCG.o: Research/BiCG.cpp.o
 
@@ -239,8 +279,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... BiCG"
+	@echo "... Eval"
 	@echo "... WS4"
 	@echo "... WS6"
+	@echo "... Evaluation/script.o"
+	@echo "... Evaluation/script.i"
+	@echo "... Evaluation/script.s"
 	@echo "... Research/BiCG.o"
 	@echo "... Research/BiCG.i"
 	@echo "... Research/BiCG.s"
