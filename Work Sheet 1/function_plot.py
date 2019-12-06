@@ -20,28 +20,23 @@ def function_4(value_x):
 
 
 # Function plotting code
-# x_axes = [i/100 for i in range(1, 300)]
-# y_axes = []
-#
-# for i in x_axes:
-#     y_axes.append([
-#         function_1(i),
-#         function_2(i),
-#         function_3(i),
-#         function_4(i)
-#     ])
-#
-# plt.plot(x_axes, [i[0] for i in y_axes], label='2 - (1/x)')
-# plt.plot(x_axes, [i[1] for i in y_axes], label='x + ln(x)')
-# plt.plot(x_axes, [i[2] for i in y_axes], label='(2 - (x**2)) / (5 + (x**2))')
-# plt.plot(x_axes, [i[3] for i in y_axes], label='x**3 + (5 * (x**2) - (10 * x) - 2)')
-# plt.legend()
-# plt.title('x vs f(x)')
-# plt.xlabel('Value of x')
-# plt.ylabel('Value of f(x)')
-# plt.show()
+x_axes = [i/100 for i in range(1, 300)]
+y_axes = []
 
+for i in x_axes:
+    y_axes.append([
+        function_1(i),
+        function_2(i),
+        function_3(i),
+        function_4(i)
+    ])
 
-# Root finding code
-
-
+plt.plot(x_axes, [i[0] for i in y_axes], label='2 - (1/x)')
+plt.plot(x_axes, [i[1] for i in y_axes], label='x + ln(x)')
+plt.plot(x_axes, [i[2] for i in y_axes], label='(2 - (x**2)) / (5 + (x**2))')
+plt.plot(x_axes, [i[3] for i in y_axes], label='x**3 + (5 * (x**2) - (10 * x) - 2)')
+plt.legend()
+plt.title('x vs f(x)')
+plt.xlabel('Value of x')
+plt.ylabel('Value of f(x)')
+plt.show()
